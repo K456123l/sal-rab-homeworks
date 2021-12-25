@@ -14,15 +14,15 @@ function addInCartMessage(title, price) {
     // выведите переменную message в консоль
     // Конец решения задания №1.1.
 
-    let message;
-    message = productName;
-    message = message + ' ';
-    message = message + 'за';
-    message = message + ' ';
-    message = message + 'productPrise';
-    message = message + ' ';
-    message = message + 'теперь в корзине';
-    console.log(message);
+       let message;
+       message = productName;
+       message = message + ' ';
+       message = message + 'за';
+       message = message + ' ';
+       message = message + 'productPrise';
+       message = message + ' ';
+       message = message + 'теперь в корзине';
+       console.log(message);
 
 
 
