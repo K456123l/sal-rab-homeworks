@@ -22,7 +22,7 @@ function addInCartMessage(title, price) {
     message = message + 'productPrise';
     message = message + ' ';
     message = message + 'теперь в корзине';
-    
+    console.log(message);
 
 
 
@@ -39,7 +39,7 @@ function addInCartCountChange(value) {
     // увеличьте значение newValue на 1
 
     // Конец решения задания №1.2.
-
+;
     return newValue;
 }
 
