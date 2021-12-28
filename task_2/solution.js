@@ -88,4 +88,4 @@ function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shi
     (shippingSum == 0) ? freeShipping = true : freeShipping = false;
 
     return {discount: discountSum, freeShipping, shipping: shippingSum, total: totalSum};
-}
+
