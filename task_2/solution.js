@@ -17,9 +17,26 @@ function calcShipping(sum, min, shipping) {
     // то shippingSum присвоить значение shippingPrice
 
     // Конец решения задания №2.1.
+    let shippingSum;
+    if(productsSum = 0){
+       productsSum = shippingSum 0;
+       console.log("В корзине пусто");     
+    }  else {
+       console.log("Доставка бесплатно");
+    }
+
+    if(productsSum >= freeShippingMinSum){
+       console.log("Доставка бесплатно");
+    }
+
+    if(productsSum > 0 + < shippingPrice){
+       console.log("Стоимость доставки") 
+    }
+         
+      
 
     return shippingSum;
-}
+
 
 function calcDiscount(sum, min, discount) {
     let productsSum = sum; // сумма в корзине
