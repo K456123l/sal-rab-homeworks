@@ -21,20 +21,15 @@ function calcShipping(sum, min, shipping) {
     if(productsSum == 0){
        shippingSum = 0;
         
-    } else {
-     
-    if(productsSum >= freeShippingMinSum){
+    } else if(productsSum >= freeShippingMinSum){
        shippingSum = 0;
       
-    } else {
-      
-    if((productsSum > 0) && (productsSum < freeShippingMinSum)){
-       shippingsSum = shippingPrice;
-    }
-       
-          
+    } else if((productsSum > 0) && (productsSum < freeShippingMinSum)){
+       shippingSum = shippingPrice;
+    }       
       
     return shippingSum;
+   }
 
 
 function calcDiscount(sum, min, discount) {
@@ -51,13 +46,16 @@ function calcDiscount(sum, min, discount) {
     // иначе присвойте discountSum значение 0
 
     // Конец решения задания №2.2.
-    let.discountSum;
+    let discountSum;
     if(productsSum >= discountMinSum){
-       discountSum = discountPart / 100 * productsSum;
-       discountSum = 0;
+       discountSum = discountPart / 100 * productsSum
+    }
+     else  {
+        discountSum = 0;
     } 
 
-    return discountPrise;
+    return  discountSum;
+   }
 
 
 function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shippingPrice}) {
@@ -72,7 +70,7 @@ function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shi
     // уменьшите totalSum на discountSum
     let totalSum;
     totalSum = productsSum;
-
+    totalSum = totalSum - discountSum; 
     let shippingSum = calcShipping(totalSum, shippingFreeMinSum, shippingPrice); // не изменяйте эту строку!!!
 
     // прибавьте к totalSum значение shippingSum
@@ -82,10 +80,9 @@ function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shi
     // если shippingSum равно нулю, то freeShipping должна быть равна true, иначе freeShipping должна быть равна false
 
     // Конец решения задачи №2.3.
-    totalSum = totalSum - discountSum;
     totalSum = totalSum + shippingSum;
     let freeShipping;
-    (shippingSum == 0) ? freeShipping = true : freeShipping = false;
+    shippingSum == 0 ? freeShipping = true : freeShipping = !true;
 
     return {discount: discountSum, freeShipping, shipping: shippingSum, total: totalSum};
-
+}
