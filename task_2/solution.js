@@ -31,8 +31,7 @@ function calcShipping(sum, min, shipping) {
 
     if(productsSum > 0 + < shippingPrice){
        console.log("Стоимость доставки") 
-    }
-         
+            
       
 
     return shippingSum;
@@ -52,9 +51,15 @@ function calcDiscount(sum, min, discount) {
     // иначе присвойте discountSum значение 0
 
     // Конец решения задания №2.2.
-
+    let.discountSum;
+    if(productsSum >= discountMinSum){
+       discountSum = discountPart + productsSum * 100 + "%";
+       discountSum = 0;
+    } else {
+        console.log("Скидка не предоставлена")
+    
     return discountSum;
-}
+
 
 function calcInvoice({sum, discountMinSum, discountPart, shippingFreeMinSum, shippingPrice}) {
     let productsSum = sum;
