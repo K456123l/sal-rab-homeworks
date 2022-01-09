@@ -32,6 +32,7 @@ function renderCartItem(item) {
      console.log(itemCountText + ' ₽ =');
 
     }
+    
     let sum = count*price;
     {
     console.log(itemCountText + sum);
